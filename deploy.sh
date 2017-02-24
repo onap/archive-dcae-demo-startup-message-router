@@ -2,9 +2,6 @@
 
 set -e
 
-# docker registry configurations
-# all docker container dependencies are now from docker hub, no need for our own any more 
-
 # do not change this, it is already matched with the git repo file structure
 DOCKER_FILE_DIR="./docker_files"
 

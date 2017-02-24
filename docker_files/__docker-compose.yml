@@ -17,7 +17,8 @@ services:
     ports:
       - "9092:9092"
     environment:
-      KAFKA_ADVERTISED_HOST_NAME: {{ ip.docker0 }}
+      #KAFKA_ADVERTISED_HOST_NAME: {{ ip.docker0 }}
+      KAFKA_ADVERTISED_HOST_NAME: kafka
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_BROKER_ID: 1
     volumes:
@@ -32,7 +33,6 @@ services:
       
   dmaap:
     image: attos/dmaap
-    #image: ecomp-nexus:51212/dmaapnew1
     ports:
       - "3904:3904"
       - "3905:3905"

@@ -1,6 +1,0 @@
-alias dcup='/opt/docker/docker-compose up'
-alias dcdown='/opt/docker/docker-compose down'
-alias din-kafka='docker exec -it "$(docker ps |grep kafka |cut -b 1-12)" /bin/bash'
-alias din-zk='docker exec -it "$(docker ps |grep zookeeper |cut -b 1-12)" /bin/bash'
-alias dlogs-kafka='docker logs "$(docker ps |grep kafka |cut -b 1-12)"'
-alias dlogs-zk='docker logs "$(docker ps |grep zookeeper |cut -b 1-12)"'
