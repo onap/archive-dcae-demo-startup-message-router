@@ -13,7 +13,9 @@ services:
         max-file: "5"
 
   kafka:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile-local
     ports:
       - "9092:9092"
     environment:
