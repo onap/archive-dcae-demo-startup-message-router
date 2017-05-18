@@ -33,5 +33,9 @@ if ls __* 1> /dev/null 2>&1; then
    done
 fi
 
+if [ -z "$MTU" ]; then
+  export MTU=$(ifconfig docker0 |grep MTU |sed -e 's/.*MTU://' -e 's/\s.*$//')
+fi
+ 
 echo "starting docker operations"
 ${DOCKER_COMPOSE_EXE} up -d
