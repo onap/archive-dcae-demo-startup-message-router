@@ -38,4 +38,4 @@ if [ -z "$MTU" ]; then
 fi
  
 echo "starting docker operations"
-${DOCKER_COMPOSE_EXE} up -d
+${DOCKER_COMPOSE_EXE} up -d --build
